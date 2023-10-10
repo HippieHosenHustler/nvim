@@ -61,3 +61,7 @@ keymap("t", "ª", "<C-\\><C-N><C-w>h", term_opts)    -- opt h
 keymap("t", "º", "<C-\\><C-N><C-w>j", term_opts)    -- opt j
 keymap("t", "∆", "<C-\\><C-N><C-w>k", term_opts)    -- opt k
 keymap("t", "@", "<C-\\><C-N><C-w>l", term_opts)    -- opt l
+
+-- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
