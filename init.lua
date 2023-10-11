@@ -15,3 +15,4 @@ require "user.bufferline"
 require "user.lualine" -- TODO: Look into more customization
 require "user.indentline" -- TODO: Look into more customization
 require "user.alpha"
+require "user.whichkey" -- TODO: Look into more customization
