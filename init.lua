@@ -10,3 +10,4 @@ require "user.autopairs"
 require "user.gitsigns"
 require "user.nvim-tree"
 require "nvim-tree".setup {}
+require "user.comment"
