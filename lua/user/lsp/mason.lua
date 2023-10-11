@@ -8,8 +8,8 @@ local apex_jar_path = vim.fn.stdpath("config") .. '/lspserver/' .. 'apex-jorje-l
 
 require'lspconfig'.apex_ls.setup {
   apex_jar_path = apex_jar_path,
-  apex_enable_semantic_errors = false,
-  apex_enable_completion_statistics = false,
+  apex_enable_semantic_errors = true,
+  apex_enable_completion_statistics = true,
   filetypes = {'apex'}
 }
 local settings = {
@@ -31,8 +31,8 @@ require'lspconfig'.html.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.apex_ls.setup {
   apex_jar_path = apex_jar_path,
-  apex_enable_semantic_errors = false,
-  apex_enable_completion_statistics = false,
+  apex_enable_semantic_errors = true,
+  apex_enable_completion_statistics = true,
   filetypes = {'apex'}
 }
 
