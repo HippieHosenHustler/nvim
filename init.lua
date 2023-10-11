@@ -12,3 +12,4 @@ require "user.nvim-tree"
 require "nvim-tree".setup {}
 require "user.comment"
 require "user.bufferline"
+require "user.lualine"
