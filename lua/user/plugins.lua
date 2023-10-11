@@ -81,6 +81,7 @@ return packer.startup(function(use)
     -- Telescopeuse
     use "nvim-telescope/telescope.nvim"
     use 'nvim-telescope/telescope-media-files.nvim'
+    use "NvChad/nvterm"
 
     -- Treesitter
     use {
@@ -92,6 +93,10 @@ return packer.startup(function(use)
 
     -- Git
     use "lewis6991/gitsigns.nvim"
+
+    -- Salesforce
+    use "beyond-the-cloud-dev/vsc-salesforce-code-snippets"
+    use "LeviticusNelson/sfdx.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

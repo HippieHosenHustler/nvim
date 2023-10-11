@@ -1,10 +1,17 @@
 local servers = {
-  "lua_ls",
-	"pyright",
+	"lua_ls",
 	"jsonls",
-    "apex_ls",
+  "html",
+  "eslint"
 }
+local apex_jar_path = vim.fn.stdpath("config") .. '/lspserver/' .. 'apex-jorje-lsp.jar'
 
+require'lspconfig'.apex_ls.setup {
+  apex_jar_path = apex_jar_path,
+  apex_enable_semantic_errors = false,
+  apex_enable_completion_statistics = false,
+  filetypes = {'apex'}
+}
 local settings = {
 	ui = {
 		border = "none",
@@ -16,6 +23,17 @@ local settings = {
 	},
 	log_level = vim.log.levels.INFO,
 	max_concurrent_installers = 4,
+}
+
+local apex_jar_path = vim.fn.stdpath("config") .. '/lspserver/' .. 'apex-jorje-lsp.jar'
+
+require'lspconfig'.html.setup{}
+require'lspconfig'.eslint.setup{}
+require'lspconfig'.apex_ls.setup {
+  apex_jar_path = apex_jar_path,
+  apex_enable_semantic_errors = false,
+  apex_enable_completion_statistics = false,
+  filetypes = {'apex'}
 }
 
 require("mason").setup(settings)

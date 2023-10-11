@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+vim.treesitter.language.register('java', 'apex')
 
 local configs = require("nvim-treesitter.configs")
 configs.setup {
