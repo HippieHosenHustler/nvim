@@ -12,5 +12,5 @@ require "user.nvim-tree"
 require "nvim-tree".setup {}
 require "user.comment"
 require "user.bufferline"
-require "user.lualine"
-require "user.indentline"
+require "user.lualine" -- TODO: Look into more customization
+require "user.indentline" -- TODO: Look into more customization
