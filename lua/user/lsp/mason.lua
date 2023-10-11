@@ -4,8 +4,7 @@ local servers = {
   "html",
   "eslint"
 }
-local apex_jar_path = vim.fn.stdpath("config") .. '/lspserver/' .. 'apex-jorje-lsp.jar'
-
+local apex_jar_path = "/Users/edwinscharfe/.local/share/nvim/mason/packages/apex-language-server/extension/dist/apex-jorje-lsp.jar"
 require'lspconfig'.apex_ls.setup {
   apex_jar_path = apex_jar_path,
   apex_enable_semantic_errors = true,
@@ -25,8 +24,7 @@ local settings = {
 	max_concurrent_installers = 4,
 }
 
-local apex_jar_path = vim.fn.stdpath("config") .. '/lspserver/' .. 'apex-jorje-lsp.jar'
-
+local apex_jar_path = "/Users/edwinscharfe/.local/share/nvim/mason/packages/apex-language-server/extension/dist/apex-jorje-lsp.jar" 
 require'lspconfig'.html.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.apex_ls.setup {
