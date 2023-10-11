@@ -50,6 +50,7 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
     use "nvim-lualine/lualine.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- Colorschemes
     use "lunarvim/colorschemes"     -- A bunch of colorschemesuse { "catppuccin/nvim", as = "catppuccin" }
