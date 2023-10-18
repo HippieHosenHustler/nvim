@@ -67,6 +67,9 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"  -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"        -- buffer completions
     use "hrsh7th/cmp-nvim-lua"        -- buffer completions
+    use "hrsh7th/cmp-nvim-lsp-signature-help"
+    use "hrsh7th/cmp-vsnip"
+    use "hrsh7th/vim-vsnip"
 
     -- snippets
     use "L3MON4D3/LuaSnip"          -- snippet engine
@@ -77,6 +80,10 @@ return packer.startup(function(use)
     use "williamboman/mason.nvim"   -- simple to use language server installer
     use "williamboman/mason-lspconfig.nvim"   -- simple to use language server installer
     use "jose-elias-alvarez/null-ls.nvim"     -- LSP diagnostics and code actions
+
+    -- Rust
+    use "neovim/nvim-lspconfig"
+    use "simrat39/rust-tools.nvim"
 
     -- Telescopeuse
     use "nvim-telescope/telescope.nvim"

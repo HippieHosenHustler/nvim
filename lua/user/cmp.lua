@@ -50,6 +50,7 @@ cmp.setup {
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
+            vim.fn["vsnip#anonymous"](args.body)
         end,
     },
     mapping = {
@@ -110,9 +111,14 @@ cmp.setup {
         end,
     },
     sources = {
-        { name = "luasnip" },
-        { name = "buffer" },
         { name = "path" },
+        { name = "luasnip" },
+        { name = 'nvim_lsp', keyword_length = 3 },
+        { name = "nvim_lsp_signature_help" },
+        { name = "nvim_lua", keyword_length = 2 },
+        { name = "buffer", keyword_length = 2 },
+        { name = "vsnip", keyword_length = 2 },
+        { name = "calc" }
     },
     confirm_opts = {
         behaviour = cmp.ConfirmBehavior.Replace,

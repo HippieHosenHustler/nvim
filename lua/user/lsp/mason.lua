@@ -1,8 +1,10 @@
 local servers = {
 	"lua_ls",
 	"jsonls",
-  "html",
-  "eslint"
+    "html",
+    "eslint",
+    "rust_analyzer",
+    "apex_ls",
 }
 local apex_jar_path = "/Users/edwinscharfe/.local/share/nvim/mason/packages/apex-language-server/extension/dist/apex-jorje-lsp.jar"
 require'lspconfig'.apex_ls.setup {
