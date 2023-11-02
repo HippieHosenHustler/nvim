@@ -40,10 +40,10 @@ packer.init {
 
 -- Install plugins here
 return packer.startup(function(use)
-    use "wbthomason/packer.nvim"    -- Have packer manage itself
-    use "nvim-lua/popup.nvim"       -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim"     -- Useful lua functions used by lots of plugins
-    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+    use "wbthomason/packer.nvim"  -- Have packer manage itself
+    use "nvim-lua/popup.nvim"     -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim"   -- Useful lua functions used by lots of plugins
+    use "windwp/nvim-autopairs"   -- Autopairs, integrates with both cmp and treesitter
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
     use "numToStr/Comment.nvim" -- Easily comment stuff
@@ -56,33 +56,32 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"
 
     -- Colorschemes
-    use "lunarvim/colorschemes"     -- A bunch of colorschemesuse { "catppuccin/nvim", as = "catppuccin" }
+    use "lunarvim/colorschemes" -- A bunch of colorschemesuse { "catppuccin/nvim", as = "catppuccin" }
     use { "catppuccin/nvim", as = "catppuccin" }
 
     -- cmp plugins
-    use "hrsh7th/nvim-cmp"          -- The completion plugin
-    use "hrsh7th/cmp-buffer"        -- buffer completions
-    use "hrsh7th/cmp-path"          -- path completions
-    use "hrsh7th/cmp-cmdline"       -- snippet completions
-    use "saadparwaiz1/cmp_luasnip"  -- snippet completions
-    use "hrsh7th/cmp-nvim-lsp"        -- buffer completions
-    use "hrsh7th/cmp-nvim-lua"        -- buffer completions
+    use "hrsh7th/nvim-cmp"         -- The completion plugin
+    use "hrsh7th/cmp-buffer"       -- buffer completions
+    use "hrsh7th/cmp-path"         -- path completions
+    use "hrsh7th/cmp-cmdline"      -- snippet completions
+    use "saadparwaiz1/cmp_luasnip" -- snippet completions
+    use "hrsh7th/cmp-nvim-lsp"     -- buffer completions
+    use "hrsh7th/cmp-nvim-lua"     -- buffer completions
     use "hrsh7th/cmp-nvim-lsp-signature-help"
     use "hrsh7th/cmp-vsnip"
     use "hrsh7th/vim-vsnip"
 
     -- snippets
-    use "L3MON4D3/LuaSnip"          -- snippet engine
-    use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
+    use "L3MON4D3/LuaSnip"             -- snippet engine
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
-    use "neovim/nvim-lspconfig"     -- enable LSP
-    use "williamboman/mason.nvim"   -- simple to use language server installer
-    use "williamboman/mason-lspconfig.nvim"   -- simple to use language server installer
-    use "jose-elias-alvarez/null-ls.nvim"     -- LSP diagnostics and code actions
+    use "neovim/nvim-lspconfig"             -- enable LSP
+    use "williamboman/mason.nvim"           -- simple to use language server installer
+    use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+    use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
 
     -- Rust
-    use "neovim/nvim-lspconfig"
     use "simrat39/rust-tools.nvim"
 
     -- Telescopeuse
@@ -92,8 +91,8 @@ return packer.startup(function(use)
 
     -- Treesitter
     use {
-     "nvim-treesitter/nvim-treesitter",
-     run = ":TSUpdate",
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
     }
     use "p00f/nvim-ts-rainbow"
     use "nvim-treesitter/playground"
