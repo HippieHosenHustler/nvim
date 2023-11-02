@@ -105,6 +105,12 @@ return packer.startup(function(use)
     use "beyond-the-cloud-dev/vsc-salesforce-code-snippets"
     use "LeviticusNelson/sfdx.nvim"
 
+    -- Transparency
+    use "xiyaowong/transparent.nvim"
+
+    -- CSV Highlighting
+    use "mechatroner/rainbow_csv"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
