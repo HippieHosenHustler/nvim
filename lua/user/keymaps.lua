@@ -20,14 +20,18 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "ª", "<C-w>h", opts)        -- move to left window, opt+h
-keymap("n", "º", "<C-w>j", opts)        -- move to lower window, opt+j
-keymap("n", "∆", "<C-w>k", opts)        -- move to higher window, opt+k
-keymap("n", "@", "<C-w>l", opts)        -- move to right window, opt+l
+keymap("n", "<A-h>", "<C-w>h", opts)        -- move to left window, opt+h
+keymap("n", "<A-j>", "<C-w>j", opts)        -- move to lower window, opt+j
+keymap("n", "<A-k>", "<C-w>k", opts)        -- move to higher window, opt+k
+keymap("n", "<A-l>", "<C-w>l", opts)        -- move to right window, opt+l
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- open file explorer
 
--- TODO: Resizing of windows
+-- Resize windows
+keymap("n", "<A-Up>", ":resize +2<CR>", opts)
+keymap("n", "<A-Down>", ":resize -2<CR>", opts)
+keymap("n", "<A-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)        -- next buffer
@@ -44,23 +48,23 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<º>", ":m .+1<CR>==", opts)        -- Move selected text down, opt j
-keymap("v", "<∆>", ":m .-2<CR>", opts)        -- Move selected text up, opt k
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)        -- Move selected text down, opt j
+keymap("v", "<A-k>", ":m .-2<CR>", opts)        -- Move selected text up, opt k
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Muve text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "º", ":move '>+1<CR>gv-gv", opts)       -- opt j
-keymap("x", "∆", ":move '<-1<CR>gv-gv", opts)       -- opt k
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)       -- opt j
+keymap("x", "<A-k>", ":move '<-1<CR>gv-gv", opts)       -- opt k
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "ª", "<C-\\><C-N><C-w>h", term_opts)    -- opt h
-keymap("t", "º", "<C-\\><C-N><C-w>j", term_opts)    -- opt j
-keymap("t", "∆", "<C-\\><C-N><C-w>k", term_opts)    -- opt k
-keymap("t", "@", "<C-\\><C-N><C-w>l", term_opts)    -- opt l
+keymap("t", "<A-h>", "<C-\\><C-N><C-w>h", term_opts)    -- opt h
+keymap("t", "<A-j>", "<C-\\><C-N><C-w>j", term_opts)    -- opt j
+keymap("t", "<A-k>", "<C-\\><C-N><C-w>k", term_opts)    -- opt k
+keymap("t", "<A-l>", "<C-\\><C-N><C-w>l", term_opts)    -- opt l
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
